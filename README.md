@@ -1,5 +1,4 @@
 # Poem -Baudelaire Text Generation using LSTM with TensorFlow
-# README for Text Generation using LSTM with TensorFlow
 
 ## Overview
 This project demonstrates the implementation of a text generation model using LSTM (Long Short-Term Memory) networks with the Keras API in TensorFlow. The dataset used for training is derived from *Les Fleurs du mal* by Charles Baudelaire, which is a collection of poems. The model learns to predict the next word in a sequence, which can then be used to generate poetry or prose similar to the training data.
