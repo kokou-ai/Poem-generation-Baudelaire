@@ -1,32 +1,32 @@
 # Poem -Baudelaire Text Generation using LSTM with TensorFlow
 
-## Overview
-This project demonstrates the implementation of a text generation model using LSTM (Long Short-Term Memory) networks with the Keras API in TensorFlow. The dataset used for training is derived from *Les Fleurs du mal* by Charles Baudelaire, which is a collection of poems. The model learns to predict the next word in a sequence, which can then be used to generate poetry or prose similar to the training data.
+## Vue d'ensemble
+Ce projet démontre l'implémentation d'un modèle de génération de texte utilisant les réseaux LSTM (Long Short-Term Memory) avec l'API Keras de TensorFlow. Le jeu de données utilisé pour l'entraînement provient de *Les Fleurs du mal* de Charles Baudelaire, un recueil de poèmes. Le modèle apprend à prédire le mot suivant dans une séquence, ce qui peut ensuite être utilisé pour générer de la poésie ou de la prose similaire aux données d'entraînement.
 
-## Project Structure
-The project is structured into the following steps:
+## Structure du Projet
+Le projet est structuré en plusieurs étapes :
 
-1. **Load Packages**: Import necessary libraries and frameworks including TensorFlow, Keras, and others for data processing and visualization.
-2. **Download Dataset**: Download the dataset containing *Les Fleurs du mal* if it is not already present.
-3. **Data Preprocessing**: 
-   - Read the dataset and process it by converting to lowercase, removing special characters, and tokenizing.
-   - Prepare sequences of words to train the model on the relationship between these sequences.
-   - Apply padding to ensure uniform input sizes for the model.
-4. **Model Construction**: 
-   - Build a sequential neural network model with an embedding layer, bidirectional LSTM layers, dropout for regularization, and dense layers for output.
-5. **Training the Model**: Train the model with the processed data over multiple epochs to learn word sequences.
-6. **Text Generation**: Use the trained model to generate new text sequences by predicting the next word given an input sequence.
-7. **Visualization**: Plot training accuracy and loss to monitor model performance.
-8. **Advanced Text Generation**: Incorporate temperature sampling to add creativity and variability to the generated text.
+1. **Chargement des Bibliothèques** : Importation des bibliothèques et frameworks nécessaires, y compris TensorFlow, Keras, et d'autres pour le traitement des données et la visualisation.
+2. **Téléchargement du Jeu de Données** : Téléchargement du jeu de données contenant *Les Fleurs du mal* si ce dernier n'est pas déjà présent.
+3. **Prétraitement des Données** :
+   - Lecture du jeu de données et traitement pour convertir le texte en minuscules, enlever les caractères spéciaux et tokeniser.
+   - Préparation des séquences de mots pour entraîner le modèle sur la relation entre ces séquences.
+   - Application du padding pour assurer des tailles d'entrée uniformes pour le modèle.
+4. **Construction du Modèle** :
+   - Construction d'un modèle de réseau de neurones séquentiel avec une couche d'embedding, des couches LSTM bidirectionnelles, un dropout pour la régularisation, et des couches denses pour la sortie.
+5. **Entraînement du Modèle** : Entraînement du modèle avec les données traitées sur plusieurs époques pour apprendre les séquences de mots.
+6. **Génération de Texte** : Utilisation du modèle entraîné pour générer de nouvelles séquences de texte en prédisant le mot suivant donné une séquence d'entrée.
+7. **Visualisation** : Traçage de l'exactitude et de la perte de l'entraînement pour surveiller les performances du modèle.
+8. **Génération Avancée de Texte** : Incorporation de l'échantillonnage par température pour ajouter de la créativité et de la variabilité au texte généré.
 
-## Requirements
+## Prérequis
 - Python 3.x
 - TensorFlow 2.x
-- Keras (included in TensorFlow 2.x)
+- Keras (inclus dans TensorFlow 2.x)
 - NumPy
 - Matplotlib
 
-Install the dependencies using:
+Installez les dépendances avec :
 ```bash
 pip install tensorflow numpy matplotlib
 
