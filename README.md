@@ -27,12 +27,13 @@ Le projet est structuré en plusieurs étapes :
 - Matplotlib
 
 Installez les dépendances avec :
-```bash
+
+```bash ```
 pip install tensorflow numpy matplotlib
 
 
 Utilisation
-1. Charger et Prétraiter les Données
+###1. Charger et Prétraiter les Données
 
 Exécutez le script suivant pour télécharger et prétraiter les données textuelles :
 
@@ -44,7 +45,7 @@ with open("/content/fleurs_mal.txt", 'r', encoding = "utf-8") as f:
     parag = f.readlines()
 parag = " ".join(parag[239:]).lower().replace('\n', ' ').replace('\r', '')
 
-2. Construire et Entraîner le Modèle
+###2. Construire et Entraîner le Modèle
 
 Pour construire et entraîner le modèle LSTM :
 
@@ -61,7 +62,7 @@ model.add(Dense(total_words, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X, y, epochs=30, verbose=1)
 
-3. Générer du Texte
+###3. Générer du Texte
 
 Générez du texte à partir d'une phrase de départ :
 
@@ -73,7 +74,7 @@ total_word_gen = 500
 poem = generate_poem(model, initial_text, tokenizer, total_word_gen)
 print(poem)
 
-4. Génération Avancée avec l'Échantillonnage par Température
+###4. Génération Avancée avec l'Échantillonnage par Température
 
 Utilisez l'échantillonnage par température pour une sortie plus variée :
 
@@ -82,18 +83,17 @@ python
 poem = generate_poem_with_temperature(model, "Oh toi, mon âme", tokenizer, 500, temperature=0.7)
 print(poem)
 
-Résultats
+##Résultats
 
 Le modèle génère des séquences de texte qui tentent d'imiter le style et le contenu de la poésie de Baudelaire. Cependant, en raison de la complexité de la langue et du modèle relativement simple, les résultats peuvent varier en qualité, avec des phrases parfois répétitives ou incohérentes.
-Remarques
+
+##Remarques
 
     Augmenter la taille du jeu de données ou améliorer l'architecture du modèle (par exemple, en utilisant des couches LSTM plus profondes) pourrait améliorer la qualité du texte généré.
     Le modèle est entraîné sur un style littéraire spécifique, ce qui le rend moins polyvalent pour d'autres types de génération de texte.
 
-Licence
 
-Ce projet est fourni à des fins éducatives sous la licence MIT.
-Conclusion
+##Conclusion
 
 Ce projet fournit une approche de base pour la génération de texte à l'aide de réseaux de neurones. Il montre le potentiel et les limites de la prédiction de séquences avec des LSTM sur des textes littéraires et peut servir de base pour des expérimentations ultérieures en traitement du langage naturel.
 
